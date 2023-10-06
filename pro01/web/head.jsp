@@ -43,6 +43,13 @@
 <link rel="icon" href=<%=path1%>"/img/logo_48.png" sizes="48x48">
 <link rel="icon" href=<%=path1%>"/img/logo_64.png" sizes="64x64">
 
+<!-- 부트스트랩 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<!-- css 로드 -->
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
 <!-- 불법 복제 방지, 필수 -->
 <script>
     // document.oncontextmenu = function () {return false;}

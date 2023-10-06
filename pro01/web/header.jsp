@@ -2,62 +2,59 @@
 <%
     String path2 = request.getContextPath();
 %>
-<div class="hd_wrap">
-    <nav class="tnb"> <!-- .hd_wrap:first-child  -->
-        <ul class="menu">
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-primary text-white d-none d-lg-flex">
+    <div class="container py-3">
+        <div class="d-flex align-items-center">
+                <h2 class="text-white fw-bold m-0">승원스쿨</h2>
+            </a>
             <% if(sid!=null) { %>
-            <li>안녕하세요,  <%=sname%>님</li> <!-- 로그인 한 회원의 이름 -->
-            <li><a href=<%=path2%>"/member/mypage.jsp">마이페이지</a></li>
-            <li><a href=<%=path2%>"/member/logout.jsp">로그아웃</a></li>
-            <li><a href=<%=path2%>"/member/map.jsp">고객센터</a></li>
-                <% if(sid.equals("admin")) {%>
-                <li><a href=<%=path2%>"/member/index.jsp">관리자페이지</a></li>
-                <% } %>
-            <% } else {%>
-            <li><a href=<%=path2%>"/member/login.jsp">로그인</a></li>
-            <li><a href=<%=path2%>"/member/term.jsp">회원가입</a></li>
-            <li><a href=<%=path2%>"/member/map.jsp">고객센터</a></li>
+            <div class="ms-auto d-flex align-items-center">
+                <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>${sname}님 반갑습니다!</small>
+            </div>
             <% } %>
-        </ul>
-    </nav>
+            <button type="button" class="btn btn-outline-light">회원가입</button>
+            <button type="button" class="btn btn-outline-light">로그인</button>
+        </div>
+    </div>
 </div>
+<!-- Topbar End -->
 
-<div class="hd_wrap"> <!-- .hd_wrap:first-child  -->
-    <a href=<%=path2%>"/index.jsp" class="logo">
-        <img src=<%=path2%>"/img/logolo.png" alt="">
-    </a>
-    <nav class="gnb">
-        <ul class="menu">
-            <li class="item1">
-                <a href=<%=path2%>"/menu/company.jsp" class="dp1">소개</a>
-                <ul class="sub">
-                    <li><a class="move" href="/menu/company.jsp#com">회사 소개</a></li>
-                    <li><a class="move" href="/menu/company.jsp#map1">오시는 길</a></li>
-                </ul>
-            </li>
-            <li class="item3">
-                <a href="" class="dp1">QnA</a>
-                <ul class="sub">
-                    <li><a class="move" href="/qna_career/qnaList.jsp">무엇이든 물어보세요</a></li>
 
-                </ul>
-            </li>
-            <li class="item3">
-                <a href="" class="dp1">커뮤니티</a>
-                <ul class="sub">
-                    <li><a class="move" href="/board_unv/boardList.jsp">자유게시판</a></li>
-                    <li><a class="move" href="/board_tea/boardTeaList.jsp">선생님 게시판</a></li>
-                    <li><a class="move" href="/board_stu/boardStuList.jsp">학생 게시판</a></li>
-                </ul>
-            </li>
-            <li class="item4">
-            <a href="" class="dp1">공지사항</a>
-            <ul class="sub">
-                <li><a class="move" href="/board/boardList.jsp">공지사항</a></li>
-                <li><a class="move" href="/faq/faqList.jsp">자주 묻는 질문</a></li>
-            </ul>
-        </li>
-        </ul>
-    </nav>
+<!-- Navbar Start -->
+<div class="container-fluid bg-white sticky-top">
+    <div class="container">
+        <nav class="navbar nav-underline navbar-expand-lg bg-white navbar-light p-lg-0">
+            <a href="index.html" class="navbar-brand d-lg-none">
+                <h1 class="fw-bold m-0">승원스쿨</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link">회사 소개</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown">커뮤니티 게시판</a>
+                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">자유게시판</a>
+                            <a href="team.html" class="dropdown-item">부모님 게시판</a>
+                            <a href="testimonial.html" class="dropdown-item">선생님 게시판</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown">정보 게시판</a>
+                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">공지사항</a>
+                            <a href="team.html" class="dropdown-item">QnA</a>
+                            <a href="testimonial.html" class="dropdown-item">FAQ</a>
+                        </div>
+                    </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
     <script src="/js/load.js"></script>
 </div>
