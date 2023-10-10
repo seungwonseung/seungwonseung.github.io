@@ -13,7 +13,6 @@
 
     <!-- css 모듈화 -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/hd.css">
     <link rel="stylesheet" href="./css/ft2.css">
     <link rel="stylesheet" href="./css/change_img.css">
     <link rel="stylesheet" href="./css/slidebox.css">

@@ -2,20 +2,30 @@
 <%
     String path2 = request.getContextPath();
 %>
+<style>
+    .btn_group{
+        margin-left: 970px
+    }
+
+    .container img{
+    }
+</style>
 
 <!-- Topbar Start -->
-<div class="container-fluid bg-primary text-white d-none d-lg-flex">
+<div class="container-fluid bg-dark text-white d-none d-lg-flex">
     <div class="container py-3">
         <div class="d-flex align-items-center">
-                <h2 class="text-white fw-bold m-0">승원스쿨</h2>
+            <img src="${path2}/img/logo2.png" class="rounded float-start" alt="로고">
             </a>
             <% if(sid!=null) { %>
             <div class="ms-auto d-flex align-items-center">
                 <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>${sname}님 반갑습니다!</small>
             </div>
             <% } %>
-            <button type="button" class="btn btn-outline-light">회원가입</button>
-            <button type="button" class="btn btn-outline-light">로그인</button>
+        <div class="btn_group" role="group" aria-label="button">
+            <button type="button" class="btn btn-join btn-outline-light">회원가입</button>
+            <button type="button" class="btn btn-login btn-outline-light">로그인</button>
+        </div>
         </div>
     </div>
 </div>
@@ -34,7 +44,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="index.html" class="nav-item nav-link">회사 소개</a>
+                    <a href="${path2}/menu/company.jsp" class="nav-item nav-link">회사 소개</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">커뮤니티 게시판</a>
                         <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
