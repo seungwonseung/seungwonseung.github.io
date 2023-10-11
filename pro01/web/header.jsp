@@ -21,6 +21,10 @@
         margin: 0 auto;
     }
 
+    .container-fluid{
+        border-bottom: #dddddd solid 1px;
+    }
+
 </style>
 
 <!-- Topbar Start -->

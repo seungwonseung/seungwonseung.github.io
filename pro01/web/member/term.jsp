@@ -23,7 +23,6 @@
         /* 본문 영역 스타일 */
         .contents {
             clear: both;
-            min-height: 150vh;
             background-repeat: no-repeat;
             background-position: center -250px;
         }
@@ -42,18 +41,13 @@
             position: relative;
         }
 
-        .page::after {
-            content: "";
-            display: block;
-            width: 100%;
-            clear: both;
-        }
 
         .page_wrap {
             clear: both;
             width: 1200px;
             height: auto;
             margin: 0 auto;
+            margin-top: 150px;
         }
 
         .page_tit {
@@ -102,6 +96,8 @@
             margin: 0 50px; /* 이미지 사이 간격 */
             width: 300px;
             height: 300px;
+            border: #585858 solid 1px;
+            border-radius: 50%;
         }
 
         .join_type {
