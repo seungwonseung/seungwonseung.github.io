@@ -1,4 +1,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style>
+    .footer_wrap {
+        font-size: 0.8125em;
+        padding: 2.92308em 0;
+        text-align: center;
+        border-top: #dddddd solid 2px;
+    }
+
+    .footer_wrap .add_bx span:before {
+        border-color: #585858;
+    }
+
+    .footer_wrap .add_bx span:before {
+        content: '';
+        border-left: 1px solid #585858;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: -1px;
+        margin-top: -5px;
+    }
+
+    .footer_wrap .add_bx span {
+        padding: 0 10px;
+        position: relative;
+        color: #585858;
+    }
+
+    .footer_wrap .add_bx span:first-child:before {
+        display: none;
+    }
+
+    .add_bx div{
+        display: block;
+    }
+</style>
 <div class="footer_wrap" id="footer">
     <div class="wrapper">
         <div class="footer_logo">

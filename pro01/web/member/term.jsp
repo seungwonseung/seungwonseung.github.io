@@ -24,7 +24,6 @@
         .contents {
             clear: both;
             min-height: 150vh;
-            background-image: url("../img/login.jpg");
             background-repeat: no-repeat;
             background-position: center -250px;
         }
@@ -132,33 +131,6 @@
         .join_type input[type="submit"] {
             margin-top: 20px; /* 버튼과 이미지 사이 간격 */
         }
-
-        .inbtn {
-            display: block;
-            border-radius: 100px;
-            min-width: 140px;
-            padding-left: 24px;
-            padding-right: 24px;
-            text-align: center;
-            line-height: 48px;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .inbtn2 {
-            display: block;
-            border-radius: 10px;
-            border-style: none;
-            min-width: 140px;
-            padding-left: 24px;
-            padding-right: 24px;
-            text-align: center;
-            line-height: 48px;
-            background-color: cornflowerblue;
-            color: #fff;
-            font-size: 18px;
-        }
     </style>
 
     <link rel="stylesheet" href="../css/ft.css">
@@ -173,36 +145,29 @@
     </div>
     <section class="page" id="page1">
         <div class="page_wrap">
-            <h2 class="page_tit">회원 유형</h2>
-
-
             <p class="select_tit">가입 유형을 선택해 주세요</p>
-
-
             <form action="join.jsp" method="post" class="frm">
                 <div>
                     <ul class="join_type">
                         <li>
-                            <img class="profile" src="/img/student.png" alt="">
-                            <input type="radio" name="job" value="1" id="stu" checked>
-                            <label for="stu">학생</label><br>
+                            <img class="profile" src="/img/studen.png" alt="">
+                            <input type="radio" class="form-check-input" name="job" value="1" id="stu" checked>
+                            <label for="stu" class="form-check-label">학생</label><br>
                         </li>
                         <li>
-                            <img class="profile" src="/img/teacher2.png" alt="">
-                            <input type="radio" name="job" value="2" id="tea">
-                            <label for="tea">교사</label><br>
+                            <img class="profile" src="/img/teache.png" alt="">
+                            <input type="radio" class="form-check-input" name="job" value="2" id="tea">
+                            <label for="tea" class="form-check-label">교사</label><br>
                         </li>
                     </ul>
                 </div>
-
-
-                <input class="inbtn2" type="submit" value="다음 단계">
+                <button type="submit" class="btn btn-outline-dark">다음 단계로</button>
             </form>
         </div>
     </section>
 </div>
-<footer class="ft" id="ft">
-    <%@ include file="../footer.jsp" %>
+<footer>
+    <%@ include file="../footer2.jsp" %>
 </footer>
 </body>
 </html>

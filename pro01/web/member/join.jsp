@@ -555,7 +555,7 @@
         </section>
     </div>
 </div>
-<footer class="ft" id="ft">
+<footer>
     <%@ include file="../footer.jsp" %>
 </footer>
 </div>

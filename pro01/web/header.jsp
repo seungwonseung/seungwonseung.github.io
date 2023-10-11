@@ -4,18 +4,30 @@
 %>
 <style>
     .btn_group{
-        margin-left: 970px
+        margin-left: 800px
     }
 
     .container img{
+        width: 300px;
     }
+
+    *{
+        font-family: 'Gaegu', cursive!important;
+        font-family: 'Nanum Pen Script', cursive!important;
+        font-family: 'Noto Serif KR', serif !important;
+    }
+
+    .navbar-nav{
+        margin: 0 auto;
+    }
+
 </style>
 
 <!-- Topbar Start -->
 <div class="container-fluid bg-dark text-white d-none d-lg-flex">
     <div class="container py-3">
         <div class="d-flex align-items-center">
-            <img src="${path2}/img/logo2.png" class="rounded float-start" alt="로고">
+            <img src="${path2}/img/logo_main1.png" class="rounded float-start" alt="로고">
             </a>
             <% if(sid!=null) { %>
             <div class="ms-auto d-flex align-items-center">
@@ -23,8 +35,8 @@
             </div>
             <% } %>
         <div class="btn_group" role="group" aria-label="button">
-            <button type="button" class="btn btn-join btn-outline-light">회원가입</button>
-            <button type="button" class="btn btn-login btn-outline-light">로그인</button>
+            <a href="../member/term.jsp" class="btn btn-join btn-outline-light" role="button">회원가입</a>
+            <a href="../member/login.jsp" class="btn btn-login btn-outline-light" role="button">로그인</a>
         </div>
         </div>
     </div>
@@ -47,17 +59,17 @@
                     <a href="${path2}/menu/company.jsp" class="nav-item nav-link">회사 소개</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">커뮤니티 게시판</a>
-                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="feature.html" class="dropdown-item">자유게시판</a>
-                            <a href="team.html" class="dropdown-item">부모님 게시판</a>
+                        <div class="dropdown-menu bg-white rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">자유게시판</a><br>
+                            <a href="team.html" class="dropdown-item">부모님 게시판</a><br>
                             <a href="testimonial.html" class="dropdown-item">선생님 게시판</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">정보 게시판</a>
-                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="feature.html" class="dropdown-item">공지사항</a>
-                            <a href="team.html" class="dropdown-item">QnA</a>
+                        <div class="dropdown-menu bg-white rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">공지사항</a><br>
+                            <a href="team.html" class="dropdown-item">QnA</a><br>
                             <a href="testimonial.html" class="dropdown-item">FAQ</a>
                         </div>
                     </div>

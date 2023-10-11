@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,6 @@
 
     <!-- css 모듈화 -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/ft2.css">
     <link rel="stylesheet" href="./css/change_img.css">
     <link rel="stylesheet" href="./css/slidebox.css">
 
@@ -52,12 +54,6 @@
             display: block; clear: both; transform-origin: 100% 100%; transform: rotate(45deg); display: none;} /* 화살표 생성 */
         .pic_lst li:hover .pic_arrow::after {display: block;} /*처음엔 안보였다가 호버하면 화살표 생성 */
 
-
-        .card_lst li.item1 .thumb_box {background-image: url("./img/kimogu.png");}
-        .card_lst li.item2 .thumb_box {background-image: url("./img/kimkuokka.png");}
-        .card_lst li.item3 .thumb_box {background-image: url("./img/hanwonseung.png");}
-        .card_lst li.item4 .thumb_box {background-image: url("./img/twodduji.png");}
-        .card_lst li.item5 .thumb_box {background-image: url("./img/hangom.png");}
 
         .ico.item1 {background-position: -70px -60px;} /*네이버 블로그 아이콘*/
         .ico.item2 {background-position: -140px -120px;} /*인스타 그램 아이콘*/
@@ -101,6 +97,41 @@
             margin-bottom: 100px;
         }
 
+        .carousel-item{
+            width: 900px;
+            height: 400px;
+            left: 530px;
+            box-shadow: ;
+
+
+        }
+        .carousel-item img{
+            border: #dddddd solid 1px;
+            margin-left: 10px;
+            margin-top: 70px;
+            width: 283px;
+        }
+
+        .carousel-item col {
+            height: 490px;
+
+        }
+
+        .text-content{
+            width: 492px;
+            margin-top: 80px;
+            margin-left: 10px;
+
+        }
+
+        #page2 {
+            border: #dddddd solid 1px;
+        }
+
+        .subject{
+            margin-bottom: 5px;
+        }
+
 
     </style>
 </head>
@@ -138,65 +169,123 @@
         <div class="page_wrap">
             <h2 class="page_tit">선생님 소개</h2>
             <p class="page_com">승원스쿨의 선생님을 소개합니다.</p>
-            <div class="sl-btn-box">
+            <!-- <div class="sl-btn-box">
                 <button type="button" class="btn next">&gt;</button>
                 <button type="button" class="btn prev">&lt;</button>
-            </div>
+            </div> -->
             <!-- div.slide_box>ul.card_lst>li.item$*7>a>div.thumb_box+p.thumb_tit{썸네일제목$}+(div.ico_box>span.ico_item+span{아이콘$}.thumb_date{2023-07-18}) -->
-            <div class="slide_box">
-                <ul class="card_lst">
-                    <li class="item1">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <div class="info">
-                                <strong class="thumb_tit">[수학]오구신</strong>
-                                <strong class="thumb_con"> 수학이 이렇게나 쉽다니 ~</strong>
+            <div id="carouselExampleInterval" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active shadow-sm p-3 mb-5 rounded">
+                        <div class="row">
+                        <div class="col-6 col-md-4 profile-photo">
+                        <img src="${path}/img/hangom.png" class="d-block" alt="...">
+                        </div>
+                        <div class="col-md-8 text-content">
+                            <p class="subject fw-lighter text-primary">국어</p>
+                            <p class="fw-bold">김 곰 선생님</p>
+                            <hr>
+                            <p class="fw-bolder">"세종대왕님 감사합니다"</p><br>
+                            <p class="fw-semibold">경력</p><br>
+                            <span>  ㆍ 스울대 국어국문학과 교수<br><br>
+                                    ㆍ춘재교육 고등 국어 강사 출신<br><br>
+                                    ㆍ비3교육 국어 강사 출신<br><br>
+                                    ㆍ(현)승원스쿨 국어 강사
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item shadow-sm p-3 mb-5 rounded" >
+                        <div class="row">
+                            <div class="col-6 col-md-4 profile-photo">
+                                <img src="${path}/img/kimogu.png" class="d-block" alt="...">
                             </div>
-                        </a>
-                    </li>
-                    <li class="item2">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <div class="info">
-                                <strong class="thumb_tit">[영어]김꽃카</strong>
-                                <strong class="thumb_con">"영어가 이렇게나 쉽다니 ~"</strong>
+                            <div class="col-md-8 text-content">
+                                <p class="subject fw-lighter text-primary">영어</p>
+                                <p class="fw-bold">오구킴 선생님</p>
+                                <hr>
+                                <p class="fw-bolder">"Hello World"</p><br>
+                                <p class="fw-semibold">경력</p><br>
+                                <span> ㆍ정중앙대 영어교육과 교수<br><br>
+                                    ㆍ춘재교육 고등 영어 강사 출신<br><br>
+                                    ㆍ(현)승원스쿨 영어 강사
+                            </span>
                             </div>
-                        </a>
-                    </li>
-                    <li class="item3">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <div class="info">
-                                <strong class="thumb_tit">[국어]한원숭</strong>
-                                <strong class="thumb_con">"국어가 이렇게나 쉽다니 ~"</strong>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item shadow-sm p-3 mb-5 rounded">
+                        <div class="row">
+                            <div class="col-6 col-md-4 profile-photo">
+                                <img src="${path}/img/math_kim.png" class="d-block" alt="...">
                             </div>
-                        </a>
-                    </li>
-                    <li class="item4">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <div class="info">
-                                <strong class="thumb_tit">[사회]한두지</strong>
-                                <strong class="thumb_con">"수학이 이렇게나 쉽다니 ~"</strong>
+                            <div class="col-md-8 text-content">
+                                <p class="subject fw-lighter text-primary">수학</p>
+                                <p class="fw-bold">진권김 선생님</p>
+                                <hr>
+                                <p class="fw-bolder">"수학은 말이죠?"</p><br>
+                                <p class="fw-semibold">경력</p><br>
+                                <span> ㆍ고려중인대 수학교육학과 교수<br><br>
+                                    ㆍ춘재교육 수학 강사 출신<br><br>
+                                    ㆍ(현)승원스쿨 수학 강사
+                            </span>
                             </div>
-                        </a>
-                    </li>
-                    <li class="item5">
-                        <a href="">
-                            <div class="thumb_box"></div>
-                            <div class="info">
-                                <strong class="thumb_tit">[과학]둘곰</strong>
-                                <strong class="thumb_con">"과학이 이렇게나 쉽다니 ~"</strong>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item shadow-sm p-3 mb-5 rounded">
+                        <div class="row">
+                            <div class="col-6 col-md-4 profile-photo">
+                                <img src="${path}/img/twodduji.png" class="d-block" alt="...">
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                            <div class="col-md-8 text-content">
+                                <p class="subject fw-lighter text-primary">사회</p>
+                                <p class="fw-bold">한두지 선생님</p>
+                                <hr>
+                                <p class="fw-bolder">"행복 사회"</p><br>
+                                <p class="fw-semibold">경력</p><br>
+                                <span> ㆍ연세가어떻게대 사회교육과 교수<br><br>
+                                    ㆍ춘재교육 중고등 사회 강사 출신<br><br>
+                                    ㆍ비3교육 사회 강사 출신<br><br>
+                                    ㆍ(현)승원스쿨 사회 강사
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item  shadow-sm p-3 mb-5 rounded">
+                        <div class="row">
+                            <div class="col-6 col-md-4 profile-photo">
+                                <img src="${path}/img/science_shin.png" class="d-block" alt="...">
+                            </div>
+                            <div class="col-md-8 text-content">
+                                <p class="subject fw-lighter text-primary">과학</p>
+                                <p class="fw-bold">신원숭 선생님</p>
+                                <hr>
+                                <p class="fw-bolder">"3대 900이면 중력을 거스를 수 있다."</p><br>
+                                <p class="fw-semibold">경력</p><br><br>
+                                <span> ㆍ카있으트 화학공학과 졸업<br><br>
+                                    ㆍ춘재교육 과학 강사 출신<br><br>
+                                    ㆍ(현)승원스쿨 과학 강사
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <svg class="carousel-control-prev-icon" aria-hidden="true"></svg>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <svg class="carousel-control-next-icon" aria-hidden="true"></svg>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
     <script src="./js/slidebox.js"></script>
 
-    <input type="radio" name="ra1" class="ra1" id="map1"/>
     <section class="page" id="map1">
         <div class="page_wrap">
             <h2 class="page_tit">오시는길</h2>
@@ -220,13 +309,11 @@
                 <p class="cnt">02-866-9309</p>
             </div>
         </div>
-</div>
     </section>
 </div>
 
-<footer class="ft" id="ft">
-    <%@include file="footer2.jsp"%>
+<footer>
+    <%@ include file="/footer2.jsp" %>
 </footer>
-<a href="#" class="totop">위로</a>
 </body>
 </html>
