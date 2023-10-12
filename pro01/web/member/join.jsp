@@ -25,38 +25,24 @@
         /* 본문 영역 스타일 */
         .contents {
             clear: both;
-            min-height: 250vh;
-            background-image: url("../img/login.jpg");
-            background-repeat: no-repeat;
-            background-position: center -250px;
-        }
 
-        .contents::after {
-            content: "";
-            clear: both;
-            display: block;
-            width: 100%;
         }
+        
 
         .page {
             clear: both;
             width: 100vw;
-            height: 150vh;
             position: relative;
         }
 
-        .page::after {
-            content: "";
-            display: block;
-            width: 100%;
-            clear: both;
-        }
+
 
         .page_wrap {
             clear: both;
             width: 1200px;
             height: auto;
             margin: 0 auto;
+
         }
 
         .page_tit {
@@ -88,12 +74,12 @@
 
         .join_form {
             margin: 0 auto;
-            margin-top: 50px;
-            background: #eaf4fa;
+            margin-top: 120px;
+            margin-bottom: 120px;
+            background: #f8f9fa;
             border-radius: 5px;
             width: 600px;
-            height: auto;
-            max-width: 100%;
+            height: 999px;
             overflow: hidden;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
         }
@@ -144,9 +130,7 @@
             bottom: 0;
             right: 5px;
             margin: 32px 0;
-            border-radius: 3px;
-            background: cornflowerblue;
-            color: #fff;
+            color: #3a3a3a;
             border: 0;
         }
 
@@ -250,7 +234,6 @@
         button.submit {
             display: block;
             height: 50px;
-            background: cornflowerblue;
             border: 0;
             border-radius: 5px;
             width: 50%;
@@ -268,19 +251,16 @@
             border: 0;
             border-radius: 5px;
             width: 50%;
-            color: #fff;
             font-size: 18px;
             padding: 0;
             margin: 0 5px;
             box-shadow: 2px 3px 7px 0px #0000005e;
         }
 
-        .btn {
-            color: #fff;
-            width: 70%;
-            display: flex;
-            margin: 0 auto;
+        .button-group{
+            margin-bottom: 15px;
         }
+
 
     </style>
 
@@ -295,19 +275,11 @@
         <%@ include file="../header.jsp" %>
     </header>
     <div class="contents" id="contents">
-        <div class="breadcrumb">
-            <p><a href="">HOME</a> &gt; <span>회원가입</span></p>
-        </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">회원 가입</h2>
-
-
                 <div class="join_form">
                     <div class="header">
-                        <img src="/img/로고48.png" />
                         <h2>회원가입</h2>
-
                     </div>
 
                     <form class="frm1" action="joinpro.jsp" method="post" onsubmit="return inform(this)">
@@ -316,7 +288,7 @@
                             <label>아이디<%--<span>사용할 수 없는 아이디 입니다</span>--%></label>
 
                             <input type="text" name="id" id="id" class="indata" placeholder="아이디 (6~20자)" required/>
-                            <button type="button" id="ck_btn" onclick="idcheck()">중복 확인</button>
+                            <button type="button" class="btn btn-outline-primary"  id="ck_btn" onclick="idcheck()"><strong>중복확인</strong></button>
                             <input type="hidden" name="ck_item" id="ck_item" value="no">
                             <input type="hidden" name="job" id="job" value="<%=job%>" readonly="">
                         </div>
@@ -539,14 +511,10 @@
                                     for="ck_item1">약관의 동의</label>
                             </div>
                         </div>
-
-
-                        <div class="btn">
-                            <button class="submit" type="submit">가입 완료</button>
-                            <button class="reset" type="reset">가입 취소</button>
-                        </div>
-
-
+                       <div class="button-group position-absolute bottom-0 start-50 translate-middle-x">
+                            <button class="btn btn-outline-primary" type="submit">가입 완료</button>
+                            <button class="btn btn-outline-danger" type="reset">가입 취소</button>
+                       </div>
                     </form>
 
                 </div>
@@ -556,7 +524,7 @@
     </div>
 </div>
 <footer>
-    <%@ include file="../footer.jsp" %>
+    <%@ include file="../footer2.jsp" %>
 </footer>
 </div>
 <script>

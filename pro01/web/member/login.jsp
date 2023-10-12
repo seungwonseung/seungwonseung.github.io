@@ -46,13 +46,6 @@
             vertical-align: baseline;
         }
 
-        .contents {
-            clear: both;
-            min-height: 120vh;
-            background-image: url("/img/login.jpg");
-            background-repeat: no-repeat;
-            background-position: center -250px;
-        }
 
         .contents::after {
             content: "";
@@ -66,20 +59,18 @@
             width: 100vw;
             height: 100vh;
             position: relative;
+            top: 180px;
         }
 
-        .page::after {
-            content: "";
-            display: block;
-            width: 100%;
-            clear: both;
-        }
 
         .page_wrap {
             clear: both;
-            width: 1200px;
-            height: auto;
-            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            background-color: #404040;
+            margin-left: 700px;
+            border-radius: 75%;
 
         }
 
@@ -107,14 +98,17 @@
 
         .login-form {
             /*margin-top: 50px;*/
-            margin: 50px auto;
-            width: 350px;
-            height: 400px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            width: 440px;
+            height: 420px;
+            margin-top: 100px;
             border: 0;
-            border-radius: 5px;
-            background-color: #eaf4fa;
+            border-radius: 40%;
             padding: 30px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
             text-align: center;
         }
 
@@ -122,7 +116,7 @@
             text-decoration: none;
             color: #9B9B9B;
             font-size: 18px;
-            /*margin-left: 130px;*/
+            margin-left: 60px;
         }
         .tb1 {
             margin-left: 22px;
@@ -130,7 +124,7 @@
 
         .logo-wrap {
             margin: 0 auto;
-            padding: 50px 10px 60px 20px;
+            padding: 50px 10px 20px;
         }
 
         .indata {
@@ -146,9 +140,9 @@
         }
 
         .inbtn {
-            color: #EEEFF1;
+            color: #404040;
             font-size: 14px;
-            background-color: cornflowerblue;
+            background-color: white;
             font-weight: bolder;
             font-size: 20px;
             margin: 5px 10px 15px 15px;
@@ -173,17 +167,12 @@
         <%@ include file="../header.jsp" %>
     </header>
     <div class="contents" id="contents">
-        <div class="breadcrumb">
-            <p><a href="">HOME</a> &gt; <span>로그인</span></p>
-        </div>
+
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">로그인</h2>
-
-
                 <div class="login-form">
-                    <div class="logo-wrap">
-                        <img src="/img/logolo.png">
+                    <div class="logo-wrap" style="padding-left: 0px">
+                        <img src="/img/logo_main1.png" style="width: 400px; margin-left: 25px; margin-top: 10px;">
                     </div>
                     <form action="loginpro.jsp" id="login_frm" class="frm">
                         <table class="tb1">
@@ -198,7 +187,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="submit" value="로그인" class="inbtn">
+                                    <input type="submit" value="로그인" class="inbtn btn-outline-dark">
                                 </td>
                             </tr>
                             </tbody>

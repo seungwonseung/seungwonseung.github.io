@@ -11,9 +11,6 @@
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
-    <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="./css/font.css">
-
     <!-- css 모듈화 -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/change_img.css">
